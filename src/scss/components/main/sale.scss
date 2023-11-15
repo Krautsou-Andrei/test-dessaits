@@ -1,0 +1,76 @@
+.sale {
+  position: relative;
+  margin-top: rem(10);
+  padding: rem(20);
+  display: flex;
+  justify-content: space-between;
+
+  background-image: url('@img/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: rem(1) solid $sale-border-color;
+  border-radius: rem(10);
+
+  box-shadow: $sale-box-shadow;
+
+  transition: $standartTrans;
+
+  &:hover {
+    box-shadow: $sale-box-shadow-hover;
+    cursor: pointer;
+  }
+
+  &__info {
+    padding-top: rem(40);
+    max-width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(14);
+  }
+
+  &__title {
+    font-size: rem(36);
+    color: $text-color-primary;
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+
+  &__description {
+    line-height: 130%;
+
+    @include line-clamp(4);
+  }
+
+  &__button-more,
+  &__button-order {
+    width: 50%;
+    height: rem(38);
+
+    border-radius: rem(6);
+  }
+
+  &__price {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    font-size: rem(24);
+    font-weight: 600;
+  }
+
+  &__form {
+    max-width: rem(360);
+  }
+
+
+}
+
+.sale-button-wrapper {
+  display: flex;
+  gap: rem(16);
+}

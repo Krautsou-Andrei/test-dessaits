@@ -27,3 +27,18 @@
     transform: rotate(359deg);
   }
 }
+
+@keyframes runStripe {
+  0% {
+    left: -75px;
+  }
+  25% {
+    left: 100%;
+  }
+  29% {
+    left: 120%;
+  }
+  100% {
+    left: 120%;
+  }
+}

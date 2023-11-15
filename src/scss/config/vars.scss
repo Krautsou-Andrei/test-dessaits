@@ -41,3 +41,11 @@ $link-menu-hover: var(--color-red-damask);
 
 $header-border-color: var(--color-nobel);
 $header-background-color: var(--color-merino);
+
+$sale-border-color: rgba(#000, 10%);
+$sale-box-shadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%), 0 0 15px 0 rgba(#000, 10%);
+$sale-box-shadow-hover: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
+
+$button-backgrount: var(--color-red-damask);
+$button-text: var(--white-color);
+$button-background-disabled: var(--primary-hover-color);

@@ -1,1 +1,64 @@
-// Заголовки, общие БЄМ блоки и проче...
+.button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  padding-left: rem(10);
+  padding-right: rem(10);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+
+  border-radius: inherit;
+
+  background-color: $button-backgrount;
+
+  color: $button-text;
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: 115%;
+
+  &:active {
+    top: rem(2);
+  }
+
+  &:disabled {
+    background-color: $button-background-disabled;
+  }
+
+  @include any-hover {
+    cursor: pointer;
+    opacity: 0.8;
+    border-color: transparent;
+
+    transition: $standartTrans;
+  }
+}
+.button--order {
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    background: white;
+    content: '';
+    position: absolute;
+    top: rem(-50);
+    left: rem(-75);
+
+    width: rem(50);
+    height: rem(155);
+
+    opacity: 0.5;
+
+    transform: rotate(35deg);
+    animation: runStripe 5s linear infinite;
+
+    z-index: 50;
+  }
+
+  &:hover::after {
+    animation-play-state: paused;
+  }
+}
