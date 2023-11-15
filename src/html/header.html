@@ -1,11 +1,19 @@
 <header class="header">
   <div class="header__container">
-    <a href="#" class="header__logo logo"></a>
-    <nav class="header__menu menu">
-      <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link"></a></li>
-      </ul>
-    </nav>
-    @@include('./iconMenu.html', {})
+    <div class="header-wrapper">
+      <a href="#" class="header__location">
+        <span>Производство Картона</span>
+        <span>Гомель</span>
+      </a>
+      <a href="#" class="header__logo logo">
+        <img class="logo__img" src="@img/svg/logo.svg" alt="logo" width="92px" height="80px" />
+        <span class="logo__title"><span>Панели</span><span>из сотового картона</span></span>
+      </a>
+      <div class="header__contacts">@@include('./components/contacts.html')</div>
+    </div>
+  </div>
+  <div class="header__border"></div>
+  <div class="header-menu__container">
+    <nav class="header__menu">@@include('./components/menu.html')</nav>
   </div>
 </header>

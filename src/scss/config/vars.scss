@@ -7,6 +7,8 @@ $maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина кон�
 $headerHeight: 100;
 $footerHeight: 100;
 
+$standartTrans: all 280ms;
+
 :root {
   --bs-font-family: 'Inter', sans-serif; // Семейство шрифта по умолчанию
   --bs-font-size: 16px; // Размер шрифта по умолчанию
@@ -17,13 +19,25 @@ $footerHeight: 100;
   --bs-radius: 10px;
 
   --primary-color: #131313;
-  --primary-hover-color: #2d2d2d;
+  --primary-hover-color: #5b5858;
   --secondary-color: #ff4040;
   --white-color: #fff;
   --black-color: #131313;
+  --color-merino: #f7efe8;
+  --color-red-damask: #dc7a43;
+  --color-nobel: #bcb6b6;
 
   --bs-shadow: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
   --hover-shadow: 0 0 5px 0 rgba(#000, 10%),
                   0 0 10px 0 rgba(#000, 10%),
                   0 0 15px 0 rgba(#000, 10%);
 }
+
+$text-color-primary: var(--primary-color);
+$text-color-primary-hover: var(--primary-hover-color);
+$text-color-hint: var(--color-red-damask);
+
+$link-menu-hover: var(--color-red-damask);
+
+$header-border-color: var(--color-nobel);
+$header-background-color: var(--color-merino);

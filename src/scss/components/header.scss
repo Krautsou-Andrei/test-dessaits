@@ -3,6 +3,8 @@
   transition: background-color var(--bs-transition);
   z-index: 50;
 
+  background-color: $header-background-color;
+
   .header-is-sticky & {
     // ..стили для липкого хедера
     position: fixed;
@@ -11,12 +13,93 @@
 
   // .header__container
   &__container {
-    height: rem($headerHeight);
+    padding: rem(16);
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    gap: rem(24);
 
     .header-is-sticky & {
       height: rem($headerHeight - 50);
+    }
+  }
+
+  &__location {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+
+    span:nth-child(1) {
+      font-size: rem(20);
+      font-weight: 600;
+
+      color: $text-color-primary;
+
+      transition: $standartTrans;
+
+      &:hover {
+        color: $text-color-primary-hover;
+      }
+    }
+
+    span:nth-child(2) {
+      padding-left: rem(20);
+      background-image: url('@img/svg/location.svg');
+      background-size: rem(12);
+      background-position: left;
+      background-repeat: no-repeat;
+
+      color: $text-color-primary;
+
+      transition: $standartTrans;
+
+      &:hover {
+        color: $text-color-primary-hover;
+      }
+    }
+  }
+
+  &__menu {
+    width: 100%;
+  }
+
+  &__border {
+    width: 100%;
+    height: rem(1);
+
+    background-color: $header-border-color;
+  }
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  gap: rem(16);
+
+  &__title {
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: column;
+
+    color: $text-color-hint;
+
+    span:nth-child(1) {
+      font-size: rem(24);
+      font-weight: 600;
+      letter-spacing: rem(10);
+    }
+
+    span:nth-child(2) {
+      font-size: rem(14);
+      // letter-spacing: rem(10);
     }
   }
 }
@@ -37,7 +120,7 @@
     span,
     &::before,
     &::after {
-      content: "";
+      content: '';
       transition: all 300ms ease 0ms;
       right: 0;
       position: absolute;
@@ -75,4 +158,3 @@
     }
   }
 }
-

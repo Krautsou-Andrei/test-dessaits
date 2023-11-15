@@ -1,0 +1,37 @@
+.menu {
+  width: 100%;
+  &__list {
+    padding: rem(12);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: rem(12);
+  }
+
+  &__item {
+    font-size: rem(24);
+    line-height: 150%;
+
+    border-bottom: rem(1) solid transparent;
+    color: $text-color-primary;
+
+    transition: $standartTrans;
+
+    a {
+      position: relative;
+      color: $text-color-primary;
+
+      &:hover {
+        color: $link-menu-hover;
+      }
+
+      &:active {
+        top: rem(2);
+      }
+    }
+
+    &:hover {
+      border-color: $link-menu-hover;
+    }
+  }
+}
