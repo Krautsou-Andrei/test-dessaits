@@ -41,6 +41,7 @@
     /** Установить свои значения */
     padding: rem(30) rem(50);
     max-width: rem(690);
+    border-radius: rem(10);
     background-color: $white-100;
     transform: translateY(rem(-200));
     opacity: 0;
@@ -52,6 +53,7 @@
     position: absolute;
 
     /** Установить свои значения */
+    font-size: rem(30);
     top: rem(20);
     right: rem(20);
     width: rem(40);
