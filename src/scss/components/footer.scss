@@ -1,6 +1,6 @@
 .footer {
-  padding: rem(20) 0;
-  background: var(--black-color);
+  padding: rem(10) 0;
+  background-color: $footer-background-color;
 
   // .footer__container
   &__container {
@@ -10,6 +10,18 @@
     @include media-mx(510) {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .menu {
+      &__list {
+        padding: 0;
+      }
+
+      &__item {
+        font-size: rem(18);
+
+        border-bottom: none;
+      }
     }
   }
 }
